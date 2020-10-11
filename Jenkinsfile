@@ -8,7 +8,7 @@ pipeline {
                 echo "building the appliaction"
                 }
             }
-        }
+        
 
         stage ('Testing Stage') {
 
@@ -16,7 +16,7 @@ pipeline {
                echo "Testing"
                 }
             }
-        }
+        
 
 
         stage ('Deployment Stage') {
@@ -26,4 +26,3 @@ pipeline {
             }
         }
     }
-}
