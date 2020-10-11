@@ -1,31 +1,29 @@
-pipeline{
+pipeline {
+    agent any
 
-agent any
+    stages {
+        stage ('Compile Stage') {
 
-stages{
+            steps {
+                echo "building the appliaction"
+                }
+            }
+        }
 
-stage("build"){
+        stage ('Testing Stage') {
 
-steps
-{
-echo "building the appliaction"
-}
-}
+            steps {
+               echo "Testing"
+                }
+            }
+        }
 
-stage("test"){
 
-steps
-{
-echo "testing the appliaction"
-}
-}
-
-stage("deploy"){
-
-steps
-{
-echo "deploying the appliaction"
-}
-}
-}
+        stage ('Deployment Stage') {
+            steps {
+               echo "Deployment"
+                }
+            }
+        }
+    }
 }
